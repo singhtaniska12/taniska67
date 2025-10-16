@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class Timetable</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #fafafa; }
+    .timetable { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: collapse; }
+    .timetable th, .timetable td { border: 1px solid #333; padding: 8px 10px; text-align: center; }
+    .timetable th { background: #222; color: #fff; }
+    .day { background: #f4f4f4; font-weight: 700; }
+    .lunch { background: #fff3cd; }
+    .timetable tbody tr:hover { background: #f0f8ff; }
+    @media (max-width: 720px) {
+      .timetable, .timetable thead, .timetable tbody, .timetable th, .timetable td, .timetable tr {
+        display: block;
+      }
+      .timetable thead { display: none; }
+      .timetable tr { margin-bottom: 12px; border-bottom: 2px solid #eee; }
+      .timetable td { text-align: left; padding-left: 50%; position: relative; }
+      .timetable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 40%;
+        font-weight: 600;
+      }
+      .day { background: transparent; font-weight: 700; padding-left: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Class Timetable</h2>
+
+  <table class="timetable" aria-label="Class timetable">
+    <thead>
+      <tr>
+        <th>Day / Time</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>Lunch</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="day" data-label="Day">MONDAY</td>
+        <td data-label="1">DAA</td>
+        <td data-label="2">DBMS</td>
+        <td data-label="3">FSD</td>
+        <td data-label="4">FSD</td>
+        <td class="lunch" data-label="Lunch">Lunch Break</td>
+        <td data-label="5">OOPS C++</td>
+        <td data-label="6">Ethics</td>
+        <td data-label="7">Lab</td>
+        <td data-label="8">Self Study</td>
+      </tr>
+
+      <tr>
+        <td class="day" data-label="Day">TUESDAY</td>
+        <td data-label="1">DAA</td>
+        <td data-label="2">DBMS</td>
+        <td data-label="3">FSD</td>
+        <td data-label="4">FSD</td>
+        <td class="lunch" data-label="Lunch">Lunch Break</td>
+        <td data-label="5">OOPS C++</td>
+        <td data-label="6">Ethics</td>
+        <td data-label="7">Lab</td>
+        <td data-label="8">Self Study</td>
+      </tr>
+
+      <tr>
+        <td class="day" data-label="Day">WEDNESDAY</td>
+        <td data-label="1">DAA</td>
+        <td data-label="2">DBMS</td>
+        <td data-label="3">FSD</td>
+        <td data-label="4">FSD</td>
+        <td class="lunch" data-label="Lunch">Lunch Break</td>
+        <td data-label="5">OOPS C++</td>
+        <td data-label="6">Ethics</td>
+        <td data-label="7">Lab</td>
+        <td data-label="8">Self Study</td>
+      </tr>
+
+      <tr>
+        <td class="day" data-label="Day">THURSDAY</td>
+        <td data-label="1">DAA</td>
+        <td data-label="2">DBMS</td>
+        <td data-label="3">FSD</td>
+        <td data-label="4">FSD</td>
+        <td class="lunch" data-label="Lunch">Lunch Break</td>
+        <td data-label="5">OOPS C++</td>
+        <td data-label="6">Ethics</td>
+        <td data-label="7">Lab</td>
+        <td data-label="8">Self Study</td>
+      </tr>
+
+      <tr>
+        <td class="day" data-label="Day">FRIDAY</td>
+        <td data-label="1">DAA</td>
+        <td data-label="2">DBMS</td>
+        <td data-label="3">FSD</td>
+        <td data-label="4">FSD</td>
+        <td class="lunch" data-label="Lunch">Lunch Break</td>
+        <td data-label="5">OOPS C++</td>
+        <td data-label="6">Ethics</td>
+        <td data-label="7">Lab</td>
+        <td data-label="8">Self Study</td>
+      </tr>
+
+      <tr>
+        <td class="day" data-label="Day">SATURDAY</td>
+        <td data-label="1">DAA</td>
+        <td data-label="2">DBMS</td>
+        <td data-label="3">FSD</td>
+        <td data-label="4">FSD</td>
+        <td class="lunch" data-label="Lunch">Lunch Break</td>
+        <td data-label="5">OOPS C++</td>
+        <td data-label="6">Ethics</td>
+        <td data-label="7">Lab</td>
+        <td data-label="8">Self Study</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

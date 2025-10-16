@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .root {
+        background-color: antiquewhite;
+      }
+      .box {
+        color: white;
+        font-size: 50px;
+        width: 25%;
+        height: 50%;
+      }
+      .container {
+        display: flex;
+
+        height: 500px;
+      }
+      .box:nth-child(2) {
+        background-color: rgb(255, 157, 0);
+      }
+
+      .box:nth-child(4) {
+        background-color: rgb(255, 157, 0);
+      }
+      .box:nth-child(1) {
+        background-color: blue;
+      }
+      .box:nth-child(3) {
+        background-color: green;
+      }
+      .box:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+      }
+      img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+      }
+      .box {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1682687218608-5e2522b04673?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Random Image"
+        />
+        <span>image 1</span>
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1541410965313-d53b3c16ef17?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Random Image"
+        />
+        <span>image 2</span>
+      </div>
+      <div class="box">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1691434474131-01f982a2dab1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Random Image"
+        />
+        <span>image 3</span>
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1682685797229-b2930538da47?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Random Image"
+        />
+        <span>image 4</span>
+      </div>
+    </div>
+  </body>
+</html>

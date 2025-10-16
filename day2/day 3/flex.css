@@ -1,0 +1,11 @@
+#container.box{
+    display: flex;
+    width: 320px;
+    height: 280px;
+}
+.box{
+    width: 25%;
+    height: auto;
+    border: 1px solid white;
+
+}
