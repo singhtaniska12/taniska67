@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Amazon Clone</title>
+  <link rel="stylesheet" href="amz.css  " />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">mini<span>azon</span></a>
+
+      <div class="search-bar">
+        <select id="categorySelect" aria-label="Category"> 
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="books">Books</option>
+          <option value="home">Home</option>
+          <option value="fashion">Fashion</option>
+        </select>
+        <input id="searchInput" type="search" placeholder="Search products, brands and more" aria-label="Search"/>
+        <button id="searchBtn" aria-label="Search button">Search</button>
+      </div>
+
+      <nav class="header-actions">
+        <button id="accountBtn" class="icon-btn">Account</button>
+        <button id="ordersBtn" class="icon-btn">Orders</button>
+        <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+          Cart <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="sub-nav">
+      <div class="sort-filter">
+        <label>
+          Sort:
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="relevance">Relevance</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating-desc">Rating: High → Low</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <strong>Price</strong>
+        <label><input type="radio" name="price" value="all" checked> All</label>
+        <label><input type="radio" name="price" value="0-25"> Under $25</label>
+        <label><input type="radio" name="price" value="25-100">$25 to $100</label>
+        <label><input type="radio" name="price" value="100-1000"> Above $100</label>
+      </div>
+      <div class="filter-group">
+        <strong>Rating</strong>
+        <label><input type="checkbox" name="rating" value="4"> 4★ & up</label>
+        <label><input type="checkbox" name="rating" value="3"> 3★ & up</label>
+      </div>
+    </aside>
+
+    <section class="products-section">
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+
+      <div id="noResults" class="no-results hidden">No products matched your search.</div>
+    </section>
+  </main>
+
+  <!-- Product quick view modal -->
+  <div id="productModal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Cart drawer -->
+  <aside id="cartDrawer" class="cart-drawer hidden" aria-hidden="true">
+    <header>
+      <h3>Your Cart</h3>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </header>
+    <div id="cartItems" class="cart-items"></div>
+    <footer class="cart-footer">
+      <div class="cart-summary">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <button id="checkoutBtn" class="primary-btn">Proceed to Checkout</button>
+      <button id="clearCartBtn" class="link-btn">Clear cart</button>
+    </footer>
+  </aside>
+
+  <div class="overlay hidden" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
