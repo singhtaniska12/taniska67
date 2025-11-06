@@ -7,7 +7,7 @@ function App() {
     "https://picsum.photos/id/1018/1200/800",
     "https://picsum.photos/id/1025/1200/800",
     "https://picsum.photos/id/1035/1200/800",
-  ];
+  ]; 
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,7 +16,7 @@ function App() {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
+ 
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
