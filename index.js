@@ -10,4 +10,11 @@ const fs=require('fs');
 //}
 //});
 //fs.appendFileSync("./ABES.txt", 'Taniska', ()=>{});
-fs.cp("./abes.txt","./a1.txt",()=>{})
+//fs.cp("./abes.txt","./a1.txt",()=>{})
+fs.appendFile("./a1.txt", " Welcome to A1 batch!", (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("File appended successfully!");
+    }
+});
